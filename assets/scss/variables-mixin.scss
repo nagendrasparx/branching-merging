@@ -1,0 +1,65 @@
+//Common Font Family
+$base-fontb: 'inter_uibold';
+$base-fontm: 'inter_uimedium';
+$base-font: 'inter_uiregular';
+
+//Common Font Colors
+$body-bg: #fafafa;
+$white: #ffffff;
+$dark: #031422;
+$white-fade: rgba(255, 255, 255, 0.6);
+$dark-fade: rgba(3, 20, 34, 0.88);
+$gray: #22313d;
+$primary-color: #68727a;
+$danger-color: #fc6369;
+$success-color: #25cd92;
+$light-dark: #36444f;
+$indicator: #5295d5;
+$indicator-danger: #f22c5e;
+$indicator-warning: #ff722e;
+$site-btn-color: #329af0;
+// Common Font Size
+$size16: 16px;
+$size34: 34px;
+$size-h1 : 24px;
+
+// Common Font Weight
+$wt400: 400;
+$wt500: 500;
+$wt600: 600;
+$wt700: 700;
+//Media Query Terget Width
+$tablet : 768px;
+$small : 992px;
+$large : 1200px;
+//Container size
+$container: 1151px;
+$container-xl: 1170px;
+
+//Mixin
+@mixin radius($value) {
+       border-radius: $value;
+}
+
+@mixin smooth($value, $time) {
+       -webkit-transition: $value ease $time 0s;
+       -moz-transition: $value ease $time 0s;
+       -ms-transition: $value ease $time 0s;
+       transition: $value ease $time 0s;   
+}
+@mixin shadow($left, $top, $fade, $color) {
+       box-shadow: $left $top $fade $color;
+}
+
+@mixin after($top, $right, $bottom, $left) {
+       content: '';
+       position: absolute;
+       left: $left;
+       right: $right;
+       bottom: $bottom;
+       top: $top;
+}
+
+
+
+

@@ -1,0 +1,74 @@
+//Styling Icons
+
+ .sprite-home{
+  width: 27px;
+  height: 23px;
+  background-position: 0 0;
+  &:hover{
+    background-position: -28px 0;
+  }
+}
+.sprite-list{
+  width: 24px;
+  height: 28px;
+  background-position: 0 -156px;
+  &:hover{
+    background-position: -28px -156px;
+  }
+}
+.sprite-cal{
+  width: 24px;
+  height: 27px;
+  background-position: 0 -37px;
+  &:hover{
+    background-position: -28px -37px;
+  }
+}
+.sprite-cmnt{
+  width: 28px;
+  height: 28px;
+  background-position: 0 -115px;
+  &:hover{
+    background-position: -28px -115px;
+  }
+}
+.sprite-help{
+  width: 27px;
+  height: 28px;
+  background-position: 0 -76px;
+  &:hover{
+    background-position: -28px -76px;
+  }
+}
+.sprite-search{
+  width: 18px;
+  height: 18px;
+  background-position: 0 -197px;
+}
+.sprite-dwld{
+  width: 40px;
+  height: 40px;
+  background-position: 0 -226px;
+}
+.sprite-share{
+  @extend .sprite-dwld;  
+  background-position: 0 -280px;
+}
+.sprite-back{
+  @extend .sprite-dwld;  
+  background-position: 0 -389px;
+}
+.sprite-csv{
+  width: 16px;
+  height: 20px;
+  background-position: 0 -358px;
+}
+.sprite-pdf{
+  @extend .sprite-csv;  
+  background-position: 0 -332px;
+}
+.sprite-invoice{
+  width: 64px;
+  height: 64px;
+  background-position: 0 -436px;
+}

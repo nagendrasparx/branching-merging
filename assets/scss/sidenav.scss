@@ -1,0 +1,85 @@
+
+//Styling sidebar type 1
+.sidebar{
+  @include smooth(left, 0.5s);
+  background-color: $dark;
+  position: absolute;
+  color: $white-fade;
+  padding: 48px 0 20px;
+  left: -88px;
+  top: 0px;
+  bottom: 0;
+  width: 88px;
+  min-height: 600px;
+  z-index: 9;   
+  .navbar-toggler{
+    position: absolute;
+    right: -45px;
+    top: 20px;
+    padding: 0;
+    span{
+      background-color: $dark;
+      position: relative;
+      height: 2px;
+      width: 30px;
+      &:after{
+        @include after(-10px, auto, auto, 0);
+        @include smooth(all, 0.5s);
+        background-color: $dark;
+        width: 30px;
+        height: 2px;
+      }
+      &:before{
+        @include after(10px, auto, auto, 0);
+        @include smooth(all, 0.5s);
+        background-color: $dark;
+        width: 30px;
+        height: 2px;
+      }
+     }
+   }   
+   @media all and (min-width: $large){
+       left: 0; 
+   }
+}
+//Styling sidebar type 2
+//Styling sidebar open
+.sidebar-open{
+  left: 0;
+  .navbar-toggler{
+    span{ 
+      background-color: transparent;     
+      &:after{
+         -webkit-transform: rotate(-45deg);
+         -moz-transform: rotate(-45deg);
+         -ms-transform: rotate(-45deg);
+         transform: rotate(-45deg);
+      }
+      &:before{
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        top: -9px;
+      }
+     }
+   }
+}
+//Styling user profile
+.user-profile{
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  width: 100%;
+  span{ 
+    margin-top: 14px;
+  }  
+}
+
+.main-nav{
+  li{
+    margin-bottom: 38px;
+  }
+}
+
+

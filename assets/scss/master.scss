@@ -1,0 +1,238 @@
+// 1) Billing page Styling
+//Page Title styling
+.page-title{
+  padding: 57px 0 0;
+  margin-bottom: 35px;
+  h1{
+    margin-bottom: 0;
+  }
+}
+//Tabblock styling
+  .nav-tabs{
+    border: none;
+    li{
+      margin-right: 2px;
+    }
+    a{
+       color: $gray;
+       opacity: 0.48;
+       font-weight: 500;
+       display: block;
+       padding: 11px 20px;        
+       text-align: center;
+       background-color: $white;
+       box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.04);
+       @media all and (min-width: $tablet){
+         min-width: 118px;
+       }
+    }
+    a.active{
+       opacity: 0.88;  
+       box-shadow: 0 -2px 10px 0 rgba(0, 0, 0, 0.04);     
+    }
+  }
+  //Tab content styling
+  .tab-content{
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.04);    
+    background-color: $white;
+  } 
+  .table-responsive{
+    position: relative;
+    &:after{
+      @include after(auto, auto, 0, 0);
+      width: 100%;
+      height: 101px;
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #ffffff);
+    }
+   }
+
+//Tab head styling
+.tab-head{
+  padding: 23px 24px 3px;
+  form{ 
+     ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: rgba(3, 20, 34, 0.6);
+      opacity: 1;
+    }
+    ::-moz-placeholder { /* Firefox 19+ */
+      color: rgba(3, 20, 34, 0.6);
+      opacity: 1;
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+      color: rgba(3, 20, 34, 0.6);
+      opacity: 1;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+      color: rgba(3, 20, 34, 0.6);
+      opacity: 1;
+    }
+  }
+  .btn{
+    float: left;
+    margin-right: 8px;
+  }   
+}
+//Tab search form styling
+.search-form{
+  position: relative;    
+    padding-left: 26px;
+    padding-right: 10px;  
+    margin-bottom: 15px;
+    @media all and (min-width: $tablet){
+      float: left;
+      width: 117px;
+      margin-bottom: 0;  
+    }  
+}
+.search-field{
+  letter-spacing: -0.4px;
+  color: rgba(3, 20, 34, 0.6);   
+  border: none;   
+  background: none;
+}
+.search-btn{
+      border: none;
+      background: none;
+      position: absolute;
+      top: 0;
+      left: -7px;
+      cursor: pointer;
+}
+//Download and share button styling
+.btn-wrap{
+    float: right;
+    position: relative;
+    padding: 10px 0;
+    @media all and (min-width: $tablet){
+       padding: 0;
+    }  
+    a{
+      float: left;
+      margin-left: 8px;
+      position: relative;
+      z-index: 1;
+    }    
+} 
+//Download tooltip styling
+.dwnld-list{
+      position: absolute;
+      bottom: 17px;
+      left: -127px;
+      color: $gray;
+      width: 164px;
+      height: 118px;
+      border-radius: 15px;
+      padding: 14px 15px;
+      box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.04);
+      background-color: $white;
+      z-index: 0;
+      a{
+        margin: 0 0 10px;
+        display: block;
+        float: none;
+      }
+      span{
+        margin-bottom: 6px;
+      }      
+ }
+ 
+// 2) Invoice page Styling
+// Invoice Title Start
+.move-back{
+  a{
+    float: left;
+  }
+  h1{
+    float: left;
+    opacity: 0.97;
+    margin: 7px 18px 0 15px;
+  }
+  span.btn{
+    margin-top: 4px;
+  }
+}
+.invoice-title{
+  padding: 44px 0 8px;  
+}
+.invoice-heading{
+    font-size: $size34;
+    letter-spacing: -1.4px;
+    font-weight: normal;
+}
+.date-wrap{
+  line-height: 44px;  
+  margin-right: 18px;
+  @media all and (min-width: $tablet){
+       float: right;
+  } 
+}
+.issue-date{
+  font-size: $size16 - 2;
+  letter-spacing: -0.2px;
+  color: $primary-color;
+  padding-right: 4px;
+}
+.date-format{
+  border-left: 1px solid rgba(0, 0, 0, 0.09);
+  color: $dark;
+  opacity: 0.8;
+  letter-spacing: -0.4px;
+  padding-left: 10px;
+}
+// Invoice Block Start
+.invoice-block{
+  box-shadow: 0 2px 10px 0 rgba(3, 20, 34, 0.04);
+  padding: 25px 35px;
+  border-radius: 8px;
+}
+// Graph Block Start
+.graph-indicator{
+  position: relative;
+  margin-bottom: 10px;
+  &:after{
+    @include after(5px, auto, auto, -24px); 
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $indicator;
+  }
+}
+.indicator-meeting{
+  @extend .graph-indicator;
+  &:after{
+    background-color: $indicator-danger;
+  }
+}
+.indicator-plan{
+  @extend .graph-indicator;
+  &:after{
+    background-color: $indicator-warning;
+  }
+}
+
+.graph-block{
+  float: right;  
+}
+.graph-info{
+  float: left;
+  margin: 30px 91px 0 0;
+}
+.graph{
+  float: right;
+}
+.graph-title{
+   letter-spacing: -0.4px;
+   color: rgba(54, 68, 79, 0.5);
+}
+.graph-value{
+   letter-spacing: -0.4px;
+   color: $light-dark;
+   font-size: $size16;
+}
+.trial-block{
+  float: left;
+}
+.wrapper{
+ //  background: url(../bg-images/2bg.jpg) left top no-repeat;
+  // height: 1000px;
+}

@@ -1,0 +1,56 @@
+//Styling Table
+
+.table{
+     white-space: nowrap;     
+     thead {
+       th{
+         border: none;
+         font-size: $size16 - 2;
+         color: #68727a;
+         font-weight: normal;
+         padding: 12px 10px;
+         text-transform: capitalize;
+         &:first-child{
+           width: 114px; 
+           padding-left: 26px;
+         }
+         &:last-child{          
+           padding-right: 20px;
+           text-align: right;
+         }
+         &:nth-child(2){
+           width: 124px;  
+         }
+         &:nth-child(3){
+           width: 124px;  
+         }
+         &:nth-child(4){
+           width: 124px;  
+         }
+       }
+     }
+     td{
+       box-shadow: 0 -1px 0 0 #eeeff0;
+       padding: 15px 10px;
+       vertical-align: middle;
+       color: $dark;
+       border-top: 1px solid #eeeff0;
+       &:first-child{
+           padding-left: 26px;
+         }
+       &:last-child{          
+           padding-right: 20px;
+           text-align: right;
+       }
+     }     
+  } 
+  .table-hover{
+    tbody{
+      tr{
+        &:hover{
+          background-color: transparent;
+          box-shadow: 0 -1px 0 0 #eeeff0, 0 0 8px 0 rgba(238, 239, 240, 0.78), 0 1px 0 0 #eeeff0;
+        } 
+      }
+    }
+  }  
